@@ -8,5 +8,4 @@ program.version('v' + require('./package.json').version)
 
 program.parse(process.argv);
   
-console.log(program.directory);
 assetSyne.run(program.directory);
