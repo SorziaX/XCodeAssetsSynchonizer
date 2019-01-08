@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 module.exports = {
-    run : function(){
+    run : function(dir){
 
         var jsonName = 'Contents.json';
         var tempJsonName = 'Contents.json';
@@ -9,14 +9,19 @@ module.exports = {
         var appiconset = ".appiconset";
         var fileNameExts = [imageset];
         var ignoreFileNameExts = [appiconset];
+        var defaultDir;
 
-        var syncConfig = fs.readFileSync('syncConfig.json', 'utf8').toString();
-        if(syncConfig){
-            var syncConfigJson = JSON.parse(syncConfig);
-            var defaultDir = syncConfigJson["path"];
-        }
-        if(!defaultDir){
-            defaultDir = ".";
+        if(dir){
+            defaultDir = dir;
+        }else{
+            var syncConfig = fs.readFileSync('assetSync.json', 'utf8').toString();
+            if(syncConfig){
+                var syncConfigJson = JSON.parse(syncConfig);
+                defaultDir = syncConfigJson["path"];
+            }
+            if(!defaultDir){
+                defaultDir = ".";
+            }
         }
 
         var dirs = walk(defaultDir);
