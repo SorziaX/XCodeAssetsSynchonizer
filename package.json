@@ -1,11 +1,20 @@
 {
   "name": "xcode-assets-sync",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Rename resource files in xcassets to its asset name",
   "main": "index.js",
   "repository": "https://github.com/SorziaX/XCodeAssetsSynchonizer.git",
   "author": "SorziaX",
   "license": "MIT",
+  "keywords":[
+    "xcode-assets-sync",
+    "xcode",
+    "asset",
+    "assets",
+    "resource",
+    "rename",
+    "xcode-assets"
+  ],
   "bin": {
     "assetSync": "./index.js"
   },
