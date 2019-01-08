@@ -1,0 +1,15 @@
+{
+  "name": "XCodeImageAssetsFilenameSynchonizer",
+  "version": "1.0.1",
+  "description": "Rename resource files in xcassets to its asset name",
+  "main": "index.js",
+  "repository": "https://github.com/SorziaX/XCodeAssetsSynchonizer.git",
+  "author": "SorziaX",
+  "license": "MIT",
+  "bin": {
+    "assetSync": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^2.19.0"
+  }
+}

@@ -1,0 +1,8 @@
+#macOS
+.DS_Store
+
+#nodejs
+node_modules/
+
+#test
+Test.imageset/
